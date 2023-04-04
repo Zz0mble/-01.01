@@ -1,0 +1,66 @@
+﻿<Page x:Class="ESUN.TestTest.PageT2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ESUN.TestTest"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageT2">
+
+    <Grid Background="White">
+        <ScrollViewer>
+            <StackPanel Name="rootpanel">
+                <StackPanel>
+                    <TextBlock Text="Глава 1. Первоначальные сведения о строении вещества" FontSize="24" Margin="5"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Молекулы. Движение молекул" FontSize="16"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="1. Молекула - это" Margin="5"/>
+                    <RadioButton Content="Частица вещества" Margin="5"/>
+                    <RadioButton Content="Кусочек вещества" Margin="5"/>
+                    <RadioButton Content="Маленькая частица" Margin="5"/>
+                    <RadioButton Content="Наименьшая частица того или иного вещества.Правильный" Name="One" Margin="5"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="2. Вещества состоят из молекул. Почему же сдлеанные из них тела кажутся сплошными?" Margin="5"/>
+                    <RadioButton Content="Потому что молекулы расположены в плотную друг к другу" Margin="5"/>
+                    <RadioButton Content="Потому что они занимают весь внутренний объем тела" Margin="5"/>
+                    <RadioButton Content="Потому что промежутки между молекулами так малы, что не различимы глазом.Правильный" Name="Two" Margin="5"/>
+                    <RadioButton Content="Потому что молекулы малы" Margin="5"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="3. Чем объясняется уменьшение размеров тела при сжатии их увеличение при растяжениии?" Margin="5"/>
+                    <RadioButton Content="Тем, что при сжатии промежутки между молекулами сокращаются, при растяжении увеличиваются.Правильный" Name="Three" Margin="5"/>
+                    <RadioButton Content="Тем, что молекулы сжимаются или растягиваются" Margin="5"/>
+                    <RadioButton Content="Тем, что при сжатии молекулы становятся еще мельче, а при растяжении крупнее" Margin="5"/>
+                    <RadioButton Content="Тем, что при сжатии или растяжении молекулы сдвигаются в ту или иную сторону" Margin="5"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="4. Одинаковы ли молекулы одного и того же вещества?" Margin="5"/>
+                    <RadioButton Content="Различаются размером" Margin="5"/>
+                    <RadioButton Content="Одинаковы.Правильно" Name="Four" Margin="5"/>
+                    <RadioButton Content="Иногда одинаковы, а иногда различаются" Margin="5"/>
+                    <RadioButton Content="Отличаются" Margin="5"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="5. Одинаковы ли молекулы разных веществ?" Margin="5"/>
+                    <RadioButton Content="Одинаковы" Margin="5"/>
+                    <RadioButton Content="Различаются размером, составом, свойствами.Правильный" Name="Five" Margin="5"/>
+                    <RadioButton Content="Иногда одинаковы, а иногда различаются" Margin="5"/>
+                    <RadioButton Content="Среди ответов нет верного" Margin="5"/>
+                </StackPanel>
+                <ComboBox Name="cmb" Width="100" Margin="5"/>
+                <Button Content="Завершить" Width="100" Margin="5" Name="End" Click="End_Click" Visibility="Visible"/>
+                <Label Content="Количество верных ответов: 0" Name="Answer" Visibility="Hidden"/>
+                <WrapPanel>
+                    <Label Content="Оценка: " Name="Evaluation" Visibility="Hidden"/>
+                    <TextBox Name="Res" Visibility="Hidden"/>
+                </WrapPanel>
+                <Button Content="Выход" Width="100" Margin="5" Name="Back" Visibility="Hidden" Click="Back_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

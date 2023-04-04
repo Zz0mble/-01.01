@@ -1,0 +1,34 @@
+﻿<Window x:Class="ESUN.Tool.AddEditStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ESUN.Tool"
+        mc:Ignorable="d"
+        Title="AddEditStudent" Height="350" Width="400">
+    <Grid Background="AliceBlue">
+            <StackPanel Width="280" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <WrapPanel>
+                    <Label Margin="0,0,44,0" Content="Фамилия:" FontSize="12" FontWeight="Bold"/>
+                    <TextBox Margin="5" FontSize="12" Width="150" Name="TxbSurName" Text="{Binding Surname}"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label Margin="0,0,74,0" Content="Имя:" FontSize="12" FontWeight="Bold"/>
+                    <TextBox Margin="5" FontSize="12" Width="150" Name="TxbName" Text="{Binding Name}"/>
+                </WrapPanel>
+            <WrapPanel>
+                <Label Margin="0,0,45,0" Content="Отчество:" FontSize="12" FontWeight="Bold"/>
+                <TextBox Margin="5" FontSize="12" Width="150" Name="TxbMidleName" Text="{Binding MiddleName}"/>
+            </WrapPanel>
+            <WrapPanel>
+                    <Label Margin="0,0,65,0" Content="Класс:" FontSize="12" FontWeight="Bold"/>
+                    <ComboBox Margin="5" DisplayMemberPath="Name" Width="150" Name="cmbt1" SelectedItem="{Binding Class}"/>
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button Background="LightGray" FontSize="12" FontWeight="Bold" Width="100" Name="BtnBack" Content="Назад" Margin="5" Click="BtnBack_Click"/>
+                    <Button Background="LightGray" FontSize="12" FontWeight="Bold" Width="100" Name="BtnCreate" Content="Подтвердить" Margin="5" Click="BtnCreate_Click"/>
+                </WrapPanel>
+            
+        </StackPanel>
+        </Grid>
+</Window>
